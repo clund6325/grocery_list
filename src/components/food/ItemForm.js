@@ -1,10 +1,19 @@
-import {useState} from 'react';
-import Item from './Item';
-const ItemForm = ({addItem}) => {
+import {useEffect, useState} from 'react';
+const ItemForm = ({addItem, id, name, price, updateItem, setEditing}) => {
   const [item, setItem] = useState({name: "", price: ""})
+  useEffect( () => {
+    if(id){
+      setItem({name, price, id: id})
+    }
+  }, [])
   const handleSubmit = (e) => {
     e.preventDefault()
-    addItem(item)
+    if (id) {
+      updateItem(id, item)
+      setEditing(false)
+    } else {
+      addItem(item)
+    }
     setItem({name: "", price: ""})
   }
   return(
