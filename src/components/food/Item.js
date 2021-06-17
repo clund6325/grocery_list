@@ -19,6 +19,15 @@ const Item = ({id, name, price, deleteItem, updateItem}) => {
       :
       <button onClick={() => setEditing(!editing)}>Edit</button>
       }
+      <br/>
+       Purchased?
+      <input
+        type="checkbox"
+        name="bought"
+        defaultChecked= {false}
+        text= "bought"
+      />
+      <hr/>
     </>
   )
 }

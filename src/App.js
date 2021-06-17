@@ -4,7 +4,7 @@ import ItemForm from './components/food/ItemForm';
 
 const App = ({}) =>{
   const [items, setItems] = useState([
-    {id: 1, name: "Cumquat", price: 3.99},
+    {id: 1, name: "Kumquat", price: 3.99},
     {id: 2, name: "Parsimmon", price: 102.99},
     {id: 3, name: "Raddichio", price: 300.99},
     {id: 4, name: "Bok Choy", price: .99},
